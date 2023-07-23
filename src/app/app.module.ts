@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { WebsocketService } from './services/socket/websocket.service';
+import { ChatModule } from './modules/chat_module/chat/chat.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ChatModule,
+    BrowserAnimationsModule,
   ],
   providers: [WebsocketService],
   bootstrap: [AppComponent]
