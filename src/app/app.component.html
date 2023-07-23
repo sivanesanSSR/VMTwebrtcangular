@@ -1,36 +1,28 @@
-<!-- <div>
+<div>Connection from:
   <select [(ngModel)]="connectionFor" (change)="selectUser($event)">
-    <option *ngFor="let user of userList" [ngValue]="user.id"> 
+    <option *ngFor="let user of userList" [ngValue]="user"> 
       {{user.name}}
     </option>
   </select>
+  <button (click)="connect()">Conn</button>
 </div>
 
-<button (click)="openCon()">
-  open con
-</button>
 
-<input type="text" [(ngModel)]="sendMsg" >
+<div>Send to:
+  <select [(ngModel)]="sendFor" (change)="sendto($event)">
+    <option *ngFor="let user of userList" [ngValue]="user"> 
+      {{user.name}}
+    </option>
+  </select> 
+</div>
 
-<button (click)="sendMessage()">send</button> -->
-<select [(ngModel)]="connectionFor" (change)="selectUser($event)">
-  <option *ngFor="let user of userList" [ngValue]="user"> 
-    {{user.name}}
-  </option>
-</select>
-<select [(ngModel)]="sendFor" (change)="sendto($event)">
-  <option *ngFor="let user of userList" [ngValue]="user"> 
-    {{user.name}}
-  </option>
-</select> 
-<button (click)="connect()">conn</button>
-<input type="text" [(ngModel)]="sendMsg">
-<button (click)="send()">send</button>
-
+<div>
+  <input type="text" [(ngModel)]="sendMsg">
+</div>
+<button (click)="send()">Send</button>
 
 <div *ngFor="let msg of messages">
 <div>
-  <!-- // {"fromUserName":"someone","fromUserId":66,"toUserName":"vms","toUserId":112,"msgType":"NORMAL","msgContent":"VMT","dateofsended":"2023-07-23T14:16:46.833Z"} -->
   <b>Message : {{msg.msgContent}}</b>
   <small>From : {{msg.fromUserName}}</small>
   <small>Date : {{msg.dateofsended}}</small>
