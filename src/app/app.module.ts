@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { WebsocketService } from './services/socket/websocket.service';
 import { ChatModule } from './modules/chat_module/chat/chat.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VideocallModule } from './modules/videocall/videocall.module';
 
 
 @NgModule({
@@ -16,11 +17,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
     ChatModule,
-    BrowserAnimationsModule,
+    VideocallModule,
   ],
   providers: [WebsocketService],
   bootstrap: [AppComponent]
