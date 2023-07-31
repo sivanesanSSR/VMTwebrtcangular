@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-test": "ng build --configuration test",
-    "build-uat": "ng build --configuration uat"
+    "build-uat": "ng build --configuration uat",
+    "servemobile": "ng serve  --port 4200 --host 192.168.1.8 --disable-host-check"
   },
   "private": true,
   "dependencies": {
